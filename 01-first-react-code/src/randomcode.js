@@ -1,4 +1,4 @@
-function Newcode() {
+function Newcode() { //This is a component
   return <h2 style={{
           color: "green",
           backgroundColor: "black",
@@ -11,3 +11,5 @@ function Newcode() {
 }
 
 export default Newcode;
+
+//Component render karne ke liye wo capital me hone chaiye !!

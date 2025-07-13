@@ -1,4 +1,4 @@
-import Newcode from "./randomcode";
+import Newcode from "./randomcode"; //component export kar liya 
 
 function App() {
   return (
