@@ -6,7 +6,9 @@ import './App.css'
 function App() {
   let [counter,counterval] = useState(0)
   const addval = () => {
-    counter++;
+    if(counter!=20){
+      counter++
+    }
     counterval(counter)
   }
   const decval = () => {
