@@ -1,6 +1,7 @@
 import Newcode from "./randomcode"; //component export kar liya 
 
 function App() {
+  const code = "..code.."
   return (
     <>
       <h1
@@ -14,7 +15,7 @@ function App() {
           alignItems: "center",
         }}
       >
-        First React Code
+        First React {code}
       </h1>
       <Newcode />
     </>
