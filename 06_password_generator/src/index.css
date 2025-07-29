@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+
+.conic-border {
+  position: relative;
+  border-radius: 0.5rem;
+  z-index: 0;
+}
+
+.conic-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: 0.6rem;
+  background: conic-gradient(
+    from var(--angle, 0deg),
+    /* #d0f0c0,
+    #90ee90,
+    #98ff98,
+    #a7f432,
+    #7cfc00,
+    #8fd400,
+    #32cd32,
+    #299617,
+    #228c22,
+    #138808,
+    #355e3b,
+    #00563f,
+    #005c29,
+    #004225,
+    #123524,
+    #013220, */
+    #ff0000,
+    #ffff00,
+    #00ff00,
+    #00ffff,
+    #0000ff,
+    #ff00ff,
+    #ff0000
+  );
+  opacity: 0.7;
+}
+
+.conic-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 0.5rem;
+  background: #101828; /* bg-gray-900 */
+}
