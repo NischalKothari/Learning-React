@@ -1,18 +1,20 @@
 import React, { useEffect,useState } from 'react'
+import { useLoaderData } from 'react-router-dom'
 
 const Github = () => {
 
-    const [data,setData] = useState([])
-    useEffect (
-        () => {
-            fetch('https://api.github.com/users/NischalKothari')
-            .then(response => response.json())
-            .then(data =>{
-                 console.log(data)
-                 setData(data)
-            })
-        }, []
-    )
+    // const [data,setData] = useState([])
+    // useEffect (
+    //     () => {
+    //         fetch('https://api.github.com/users/NischalKothari')
+    //         .then(response => response.json())
+    //         .then(data =>{
+    //              console.log(data)
+    //              setData(data)
+    //         })
+    //     }, [])
+
+    const data = useLoaderData()
 
   return (
     <div className='flex flex-col gap-4 justify-center items-center text-2xl py-10 '>
@@ -24,3 +26,8 @@ const Github = () => {
 }
 
 export default Github
+
+export const GithubInfoLoader = async () => {
+  const response = await fetch('https://api.github.com/users/NischalKothari')
+  return response.json()
+}
